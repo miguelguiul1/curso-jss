@@ -1,0 +1,545 @@
+/* 01 | 
+Implemente um programa em Java que a partir de dois números informados pelo 
+usuário, calcule sua soma e apresente ao usuário.
+Entrada
+Saída
+10
+5
+“A soma de 10 + 5 é 15”
+8
+2
+“A soma de 8 + 2 é 10"
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE SOMA');
+console.log();
+
+console.log('Me informe um número');
+let n1 = Number(ler());
+
+console.log('Me informe mais um número');
+let n2 = Number(ler());
+
+let soma = n1 + n2
+
+console.log('A soma do número ' + n1 + ' + ' + n2 + ' é ' + soma)
+
+/*02 | 
+Implemente um programa em Java que a partir de um número informado pelo 
+usuário, calcule seu dobro e apresente ao usuário.
+Entrada
+Saída
+10
+“O dobro de 10 é 20”
+-4
+“O dobro de -4 é -8"
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE DOBRO');
+console.log();
+
+console.log('Me informe um número:');
+let n1 = Number(ler());
+
+let dobro = n1 * 2;
+
+console.log('O dobro de ' + n1 + ' é ' + dobro);
+
+/*03 | 
+Implemente um programa em Java que a partir de um número informado pelo 
+usuário, calcule seu triplo e apresente ao usuário.
+Entrada
+Saída
+10
+“O triplo de 10 é 30”
+-4
+“O triplo de -4 é -12
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE TRIPLO')
+console.log();
+
+console.log('Me informe um número');
+let n1 = Number(ler());
+
+let triplo = n1 * 3;
+
+console.log('O triplo de '+n1+' é '+triplo);
+
+/*04 | 
+Implemente um programa em Java que a partir de um número informado pelo 
+usuário, calcule sua metade e apresente ao usuário.
+Entrada
+Saída
+10
+“A metade de 10 é 5.0”
+-4
+“A metade de -4 é -2.0”
+5
+“A metade de 5 é 2.5*/
+import prompt from 'prompt-sync'
+let ler = prompt()
+
+console.log('PROGRAMA DE METADE');console.log();
+
+console.log('Me informe um número')
+let n1 = Number(ler())
+
+let metade = n1 / 2
+
+console.log('A metade de '+n1+' é '+metade.toFixed(1));
+
+/*05 | 
+Implemente um programa em Java que a partir do lado de um quadrado, 
+informado pelo usuário, calcule sua área e apresente ao usuário.
+Entrada
+Saída
+10
+“A área do quadrado é 100”
+4
+“A área do quadrado é 16
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('ÁREA DO QUADRADO');console.log();
+
+console.log('Me informe o comprimento do lado do quadrado:');
+let n1 = Number(ler());
+
+let área = n1 * n1;
+
+console.log('A área do quadrado é '+área);
+
+/*06 | 
+Implemente um programa em Java que a partir da altura e base de um retângulo, 
+informados pelo usuário, calcule sua área e apresente ao usuário.
+Entrada
+Saída
+10
+5
+“A área do retângulo (10 por 5) é 50”
+4
+1
+“A área do retângulo (4 por 1) é 4”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('ÁREA DO RETÂNGULO');console.log('...');
+
+console.log('Me informe a base:');
+let base = Number(ler());
+
+console.log('Me informe a altura:');
+let altura = Number(ler());
+
+let área = base * altura;
+
+console.log('A área do retângulo ('+base+' por '+altura+') é '+área);
+
+/*07 | 
+Implemente um programa em Java que a partir da altura e base de um triângulo, 
+informados pelo usuário, calcule sua área e apresente ao usuário.
+Entrada
+Saída
+10
+5
+“A área do triângulo é 25.0”
+3
+5
+“A área do triângulo é 7.5”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('ÁREA DO TRIÂNGULO');console.log('...');
+
+console.log('Me informe a base:');
+let n1 = Number(ler());
+console.log('Me informe a altura:');
+let n2 = Number(ler());
+
+let A = (n1 * n2) / 2;
+
+console.log('A área do triângulo é '+A);
+
+/*08 | 
+Implemente um programa em Java que a partir do lado de um octágono de lados 
+iguais, informados pelo usuário, calcule seu perímetro e apresente ao usuário.
+Entrada
+Saída
+8
+“O perímetro do octágono é 64”
+3
+“O perímetro do octágono é 24”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PERÍMETRO DO OCTÁGONO');console.log('...');
+
+console.log('Qual o comprimento de cada lado?')
+let n1 = Number(ler());
+
+let P = n1 * 8;
+
+console.log('O perímetro do octágono é '+P)
+
+/*09 | 
+Implemente um programa em Java que a partir de três notas, informadas pelo 
+usuário, calcule a média e apresente ao usuário.
+Entrada
+Saída
+8
+6
+4
+“A média é 6.0”
+5.5
+6.5
+6
+“A média é 6.0”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE MÉDIAS');console.log('...');
+
+console.log('Me informe a primeira nota:');
+let n1 = Number(ler());
+console.log('Me informe a segunda nota:');
+let n2 = Number(ler());
+console.log('Me informe a terceira nota:');
+let n3 = Number(ler());
+
+let m = (n1 + n2 + n3) / 3;
+
+console.log('A média é '+m);
+
+/*10 | 
+Implemente um programa em Java que a partir de cinco notas, informadas pelo 
+usuário, calcule a média e apresente ao usuário.
+Entrada
+Saída
+8
+6
+4
+5
+7
+“A média é 6.0”
+8.5
+6.5
+4.5
+5.5
+0
+“A média é 5.0”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE MÉDIAS');console.log('...');
+
+console.log('Me informe a primeira nota:');
+let n1 = Number(ler());
+console.log('Me informe a segunda nota:');
+let n2 = Number(ler());
+console.log('Me informe a terceira nota:');
+let n3 = Number(ler());
+console.log('Me informe a quarta nota:');
+let n4 = Number(ler());
+console.log('Me informe a quinta nota:');
+let n5 = Number(ler());
+
+let m = (n1 + n2 + n3 + n4 + n5) / 5;
+
+console.log('A média é '+m);
+
+/*01 | 
+Implementar um programa em Java para calcular o valor final de uma compra a 
+partir do valor da compra e do cupom de desconto. O cupom diz quantos reais 
+terá de desconto.
+Entrada
+Saída
+1000
+100
+“Compra finalizada! O total é de R$ 900.0”
+1000
+1.5
+“Compra finalizada! O total é de R$ 998.5”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+console.log('PROGRAMA DE CUPOM R$');console.log('...');
+
+console.log('Me informe qual o valor da compra:');
+let n1 = Number(ler());
+console.log('Me informe o desconto do cupom:');
+let c = Number(ler());
+
+let d = n1 - c;
+
+console.log('Compra finalizada! O total é de R$ '+d);
+
+/*02 | 
+Implementar um programa em Java para calcular o valor final de uma compra a 
+partir do valor da compra e do cupom de desconto. O cupom diz a porcentagem 
+que terá de desconto.
+Entrada
+Saída
+1000
+100
+“Compra finalizada! O total é de R$ 0.0”
+1000
+1.5
+“Compra finalizada! O total é de R$ 985.0”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE CUPOM %');console.log('...');
+
+console.log('Me informe o valor da compra:');
+let n1 = Number(ler());
+console.log('Me informe quantos porcento de desconto o cupom está dando:');
+let p = Number(ler());
+
+let d = p/100 * n1; //desconto
+let t = n1 - d // total
+
+console.log('Compra finalizada! O total é de R$ '+t);
+
+/*03 | 
+Implementar um programa em Java para converter kilos para gramas.
+Entrada
+Saída
+1
+1000.0
+1.5
+1500.0
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('CONVERSÃO DE KG - G');console.log('...');
+
+console.log('Quantos Kg?')
+let kg = Number(ler());
+
+let g = kg * 1000
+console.log(+g);
+
+/*04 | 
+Implementar um programa em Java para converter reais em dólar (1$ -> R$ 5,16).
+Entrada
+Saída
+5.16
+1
+0
+0
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE CONVERÇÃO');console.log('...');
+
+console.log('Me informe quantos dólares você tem:');
+let n1 = Number(ler())
+
+let c = n1 * 5.16
+
+console.log (c.toFixed(2))
+
+/*05 | 
+Implementar um programa em Java que retorne uma mensagem formatada com 
+o valor das parcelas de uma compra, a partir do valor total da compra e da 
+quantidade do parcelamento.
+Entrada
+Saída
+1200
+10
+“Sua compra de R$ 1200 em 10x de R$ 120.0 foi concluída”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt ();
+
+console.log('PROGRAMA DE PARCELA');console.log('...');
+
+console.log('Qual o valor da sua compra?');
+let c = Number(ler());
+
+console.log('Quantas parcelas?');
+let p = Number(ler());
+
+let total = c / p;
+
+console.log('Sua compra de R$ '+ c +'em '+ p +'x de R$ '+ total.toFixed(1) +' foi concluída');
+
+/*06 | 
+Implementar um programa em Java que calcule quantas paradas para abastecimento 
+são necessárias para realizar uma viagem, a partir da capacidade do tanque de 
+combustível (em litros), do consumo do veículo (km por litros) e da distância da 
+viagem (km).
+* Você deve partir do principio que o tanque está vazio.
+* Os valores de entrada devem ser entendidos como inteiros.
+* Não usar o Math.ceil(n).
+* No caso da distância bater exatamente com a capacidade de viagem do veículo, considerar um 
+abastecimento a mais.
+Entrada
+Saída
+50
+10
+400
+“Você precisará fazer 1 paradas para abastecer.”
+50
+10
+700
+“Você precisará fazer 2 paradas para abastecer.”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE ABASTECIMENTO');
+console.log('...');
+
+console.log('Me informe a capacidade do tanque:');
+let cap = Number(ler());
+
+console.log('Me informe o consumo do veículo (km por litro):');
+let cons = Number(ler());
+
+console.log('Me informe a distância da viagem:');
+let dist = Number(ler());
+
+let km = cap * cons;
+
+let paradas = parseInt(dist / km);
+
+if (dist % km != 0) {
+    paradas = paradas + 1;
+}
+
+console.log('Você precisará fazer ' + paradas + ' paradas para abastecer.');
+
+/*07 | 
+Implementar um programa em Java para calcular o total de uma venda de açaí a 
+partir da quantidade de açaís comprados, sabendo que o estabelecimento oferece 
+um tamanho único para o açaí no valor de R$ 13,50
+Entrada
+Saída
+1
+“Total à pagar é R$ 13.5”
+2
+“Total à pagar é R$ 27.0”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('QUANTOS AÇAÍS DEVO PAGAR???');console.log('...');
+
+console.log('Quantos açaís você vai querer?');
+let açaí = Number(ler());
+
+let pagar = açaí * 13.50;
+
+console.log('Total à pagar é R$ '+ pagar.toFixed(1));
+
+/*08 | 
+Implementar um programa em Java para calcular o total de uma venda de açaí a 
+partir das quantidades compradas para cada tamanho: pequeno, médio e grande, 
+sabendo que o valor do açaí é R$ 13,50, R$ 15,00 e R$ 17,50 respectivamente.
+Entrada
+Saída
+1
+1
+1
+“Total à pagar é R$ 46.0”
+2
+0
+1
+“Total à pagar é R$ 44.5”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE AÇAÍ'); console.log('...');
+
+let pequeno = Number(ler('Quantos açaís pequeno você vai querer???'));
+let médio = Number(ler('Quantos açaís do médios você vai querer???'));
+let grande = Number(ler('Quantos açaís grandes você vai querer???'));
+
+let pagar = (pequeno * 13.5) + (médio * 15.00) + (grande * 17.50);
+
+console.log('Total à pagar é R$ '+pagar.toFixed(1));
+
+/*09 | 
+Implementar um programa em Java para calcular o total de uma venda de açaí a 
+partir das quantidades compradas para cada tamanho: pequeno, médio e grande, 
+sabendo que o valor do açaí é R$ 13,50, R$ 15,00 e R$ 17,50. O programa também 
+deve receber o valor do cupom de desconto em porcentagem.
+Entrada Saída
+1
+1
+1
+50
+“Total à pagar é R$ 23.0”
+2
+0
+1
+0
+“Total à pagar é R$ 44.5”
+2
+0
+1
+100
+“Total à pagar é R$ 0.0”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA DE AÇAÍ'); console.log('...');
+
+let pequeno = Number(ler('Quantos açaís pequeno você vai querer???'));
+let médio = Number(ler('Quantos açaís do médios você vai querer???'));
+let grande = Number(ler('Quantos açaís grandes você vai querer???'));
+let cupom = Number(ler('Quantos % é o seu cúpom???'));
+
+let pagar = (pequeno * 13.5) + (médio * 15.00) + (grande * 17.50);
+let total = (cupom / 100) * pagar;
+
+console.log('Total à pagar é R$ '+total.toFixed(1));
+
+/*10 | 
+Implementar um programa em Java para calcular o salário líquido de um 
+funcionário, a partir de seu salário base, do bônus mensal em porcentagem e 
+do total de descontos em reais.
+Entrada
+1000
+10
+300
+Saída
+“Seu salário líquido é de R$ 800.0”
+1000
+20
+200
+“Seu salário líquido é de R$ 1000.0”
+*/
+import prompt from 'prompt-sync'
+let ler = prompt();
+
+console.log('PROGRAMA SALÁRIO LIQUIDO');console.log('...');
+
+let salarioB = Number(ler('Informe seu salárioo base: R$ '));
+let bonus = Number(ler('Informe seu bônus: % '));
+let descontos = Number(ler('Me informe o total de descontos do mês: R$ '));
+
+let valorBaseBonus = (bonus / 100) * salarioB;
+let salariobruto = salarioB + valorBaseBonus;
+let salarioliquido = salariobruto - descontos;
+
+console.log('Seu salário liquido é de R$ ' + salarioliquido.toFixed(1));
