@@ -1,14 +1,13 @@
 import prompt from 'prompt-sync'
 let ler = prompt();
 
-console.log('-- PROGRAMA DA TABUADA --');
-
 // COLETA DE DADOS
-console.log('Informe um número:');
-let n = Number(ler());
+let cap = Number(ler('Capacidade do tanque de combustível (em litros): '));
+let con = Number(ler('Autonomia do veículo (km por litro): '));
+let dis = Number(ler('Distância a ser percorrida (em km): '));
 
 // PROCESSAMENTO e APRESENTAÇÃO
-tabuada(n);
+
 
 
 
