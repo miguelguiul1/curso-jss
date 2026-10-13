@@ -1,27 +1,38 @@
 import { con } from './connection.js';
 
-export async function saveusuarios( usuario ) {
+export async function saveusuarios( usuarios ) {
   const command = `
-    insert into usuario (nome, email, senha)
-      values (?, ?, ?)
+    insert into usuarios (login, senha)
+      values (?, ?)
   `
 
   const [resposta] = await con.query(command,[
-    usuario.nome,
-    usuario.email,
-    usuario.senha
+    usuarios.login,
+    usuarios.senha
   ]);
 
   return resposta.insertId;
 }
 
+export async function getUsuarioLogin(login) {
+  const command = `
+    select id,
+    login,
+    senha
+    from usuarios
+    where login = ?
+  `
+  const [linhas] = await con.query(command, [login]);
+  return linhas[0];
+  
+}
+
 export async function getUsuarioId(id) {
   const command = `
     select id,
-    nome,
-    email,
+    login,
     senha
-    from usuario
+    from usuarios
     where id = ?
   `
 
@@ -32,40 +43,32 @@ export async function getUsuarioId(id) {
 export async function getTodosUsuarios() {
   const command = `
     select id,
-    nome,
-    email,
+    login,
     senha
-    from usuario
+    from usuarios
   `
 
   const [linhas] = await con.query(command);
   return linhas;
 }
 
-export async function updateUsuarios(id, usuario) {
+export async function updateUsuarios(id, usuarios) {
   const command = `
-    update usuario set
-      nome = ?,
-      email = ?,
+    update usuarios set
+      login = ?,
       senha = ?
     where id = ?
   `
 
   await con.query(command, [
-    usuario.nome,
-    usuario.email,
-    usuario.senha,
+    usuarios.login,
+    usuarios.senha,
     id
   ]);
 }
 
 export async function deleteUsuarios(id) {
-  const command = `delete from usuario where id = ?`;
+  const command = `delete from usuarios where id = ?`;
   await con.query(command, [id]);
 }
-    livro.nome,
-    livro.data_livro
-  ;
-
-  return resposta.insertId;
   

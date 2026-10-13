@@ -4,7 +4,7 @@ use diario;
 create table usuarios (
 id int primary key auto_increment,
 login varchar (30) not null unique,
-senha_hash varchar (200) not null,
+senha varchar (200) not null,
 criado datetime default current_timestamp
 );
 
