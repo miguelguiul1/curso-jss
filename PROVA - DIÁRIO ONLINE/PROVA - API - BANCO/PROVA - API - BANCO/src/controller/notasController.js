@@ -4,29 +4,54 @@ import { Router } from 'express';
 const endpointnotas = Router();
 
 endpointnotas.get('/notas/:id', async (req, resp) => {
+  let id = req.params.id;
 
-resp.send(nota);
+  let nota = await dbdiario.buscarNota(id);
+
+  if (nota == undefined) {
+    resp.status(404).send({ message: 'Nota não encontrada' });
+  } else {
+    resp.send(nota);
+  }
 })
 
 endpointnotas.get('/notas', async (req, resp) => {
+  let notas = await dbdiario.listarNotas();
 
-resp.send(notas);
+  resp.send(notas);
+})
+
+endpointnotas.get('/usuarios/:id/notas', async (req, resp) => {
+  let id = req.params.id;
+
+  let notas = await dbdiario.listarNotasUsuario(id);
+
+  resp.send(notas);
 })
 
 endpointnotas.post('/notas', async (req, resp) => {
+  let nota = req.body;
 
-resp.send({ id });
+  let id = await dbdiario.salvarNota(nota);
 
+  resp.send({ id });
 })
 
 endpointnotas.put('/notas/:id', async (req, resp) => {
+  let id = req.params.id;
+  let nota = req.body;
 
-resp.send({ message: 'Nota atualizada com sucesso' });
+  await dbdiario.alterarNota(id, nota);
+
+  resp.send({ message: 'Nota atualizada com sucesso' });
 })
 
 endpointnotas.delete('/notas/:id', async (req, resp) => {
+  let id = req.params.id;
 
-resp.send({ message: 'Nota excluída com sucesso' });
+  await dbdiario.excluirNota(id);
+
+  resp.send({ message: 'Nota excluída com sucesso' });
 })
 
 export default endpointnotas;

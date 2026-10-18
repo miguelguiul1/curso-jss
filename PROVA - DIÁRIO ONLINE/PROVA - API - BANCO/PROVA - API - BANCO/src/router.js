@@ -1,11 +1,7 @@
-import livro from './controller/livroController.js';
-import cliente from './controller/clienteController.js';
-import venda from './controller/vendaController.js';
-import vendaItem from './controller/vendaItemController.js';
+import usuarios from './controller/usuariosController.js';
+import notas from './controller/notasController.js';
 
 export function addRouter(api){
-    api.use(livro);
-    api.use(cliente);
-    api.use(venda);
-    api.use(vendaItem);
+    api.use(usuarios);
+    api.use(notas);
 }
